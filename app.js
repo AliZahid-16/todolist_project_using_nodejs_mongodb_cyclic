@@ -12,8 +12,12 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+//local
 // mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
-mongoose.connect("mongodb://admin-alizahid:Test123@ac-bzk4qcx-shard-00-00.9huxjqi.mongodb.net:27017,ac-bzk4qcx-shard-00-01.9huxjqi.mongodb.net:27017,ac-bzk4qcx-shard-00-02.9huxjqi.mongodb.net:27017/?ssl=true&replicaSet=atlas-113ooz-shard-0&authSource=admin&retryWrites=true&w=majority/todolistDB");
+//atlas
+// mongoose.connect("mongodb://admin-alizahid:Test123@ac-bzk4qcx-shard-00-00.9huxjqi.mongodb.net:27017,ac-bzk4qcx-shard-00-01.9huxjqi.mongodb.net:27017,ac-bzk4qcx-shard-00-02.9huxjqi.mongodb.net:27017/?ssl=true&replicaSet=atlas-113ooz-shard-0&authSource=admin&retryWrites=true&w=majority/todolistDB");
+//cyclic
+mongoose.connect("mongodb+srv://admin-alizahid:Test123@cluster0.9huxjqi.mongodb.net/test");
 
 const itemsSchema = {
   name: String
